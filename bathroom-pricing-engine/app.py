@@ -18,9 +18,10 @@ transcript = st.text_area(
 )
 city = st.text_input("City (optional)")
 
-generate = st.button("Generate Quote")
+if "latest_file" not in st.session_state:
+    st.session_state.latest_file = None
 
-if generate and transcript.strip():
+if st.button("Generate Quote") and transcript.strip():
     with st.spinner("Generating quote..."):
         cmd = [
             "python3",
@@ -42,24 +43,40 @@ if generate and transcript.strip():
             st.error("No output file found.")
         else:
             latest_file = max(files, key=os.path.getctime)
+            st.session_state.latest_file = latest_file
             with open(latest_file) as f:
                 quote = json.load(f)
             st.success("Quote generated!")
             st.subheader("Quote Output")
             st.json(quote)
-            st.markdown("---")
-            st.subheader("Feedback")
-            feedback = st.radio(
-                "Was this quote accurate?", ("👍 Yes", "👎 No"), horizontal=True
-            )
-            notes = st.text_area("Additional feedback (optional)", key="feedback_notes")
-            if st.button("Submit Feedback"):
-                # Save feedback to a simple file (or call your feedback logic)
-                feedback_entry = {
-                    "quote_file": latest_file,
-                    "feedback": feedback,
-                    "notes": notes,
-                }
-                with open(os.path.join(output_dir, "ui_feedback.jsonl"), "a") as fb:
-                    fb.write(json.dumps(feedback_entry) + "\n")
-                st.success("Thank you for your feedback!")
+
+# Only show feedback if a quote was generated
+if st.session_state.latest_file:
+    st.markdown("---")
+    st.subheader("Feedback")
+    feedback = st.radio(
+        "Was this quote accurate?", ("👍 Yes", "👎 No"), key="feedback_radio"
+    )
+    notes = st.text_area("Additional feedback (optional)", key="feedback_notes")
+    if st.button("Submit Feedback"):
+        # Extract quote ID from filename
+        quote_file = os.path.basename(st.session_state.latest_file)
+        quote_id = quote_file.replace(".json", "")
+        feedback_entry = {"negative": feedback == "👎 No", "notes": notes}
+        feedback_path = "data/feedback.json"
+        # Load or create feedback.json
+        if os.path.exists(feedback_path):
+            with open(feedback_path, "r") as f:
+                all_feedback = json.load(f)
+        else:
+            all_feedback = {}
+        # Update feedback
+        all_feedback[quote_id] = feedback_entry
+        with open(feedback_path, "w") as f:
+            json.dump(all_feedback, f, indent=2)
+        st.session_state.feedback_submitted = True
+        st.experimental_rerun()
+    # Show thank you message if feedback was just submitted
+    if st.session_state.get("feedback_submitted", False):
+        st.success("Thank you for your feedback!")
+        del st.session_state["feedback_submitted"]
