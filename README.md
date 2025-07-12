@@ -6,7 +6,7 @@ This project is a robust, modular pricing engine that generates structured, deta
 ---
 
 ## Architecture Diagram
-![Functional Structure](Functional%20Structure.png)
+![Functional Structure](bathroom-pricing-engine/Functional%20Structure.png)
 *Functional structure of the smart pricing engine pipeline.*
 
 ---
