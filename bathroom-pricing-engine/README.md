@@ -69,11 +69,41 @@ This project is a robust, modular pricing engine that generates structured, deta
 ---
 
 ## How to Run
+
+You can use the engine in two ways:
+
+### 1. Command Line (CLI)
 Run the engine with your transcript and city:
 ```bash
 python3 pricing_engine.py --transcript "<your transcript here>" --city "Marseille"
 ```
 Output will be saved to `output/sample_quote.json`.
+
+### 2. Streamlit Web UI
+A sleek web interface is available for interactive use:
+
+**Setup:**
+1. Make sure you have all requirements installed:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. (If not already) Install Streamlit:
+   ```bash
+   pip install streamlit
+   ```
+
+**Run the App:**
+From your project root, run:
+```bash
+streamlit run app.py
+```
+This will open a browser window where you can:
+- Enter a transcript and (optionally) a city
+- Generate a detailed quote
+- Submit feedback on the quote
+
+![Streamlit UI Screenshot](StreamlitApp.png)
+*Example: Streamlit web interface for generating and viewing a bathroom renovation quote.*
 
 ---
 
@@ -230,30 +260,3 @@ Client wants to renovate a small 4m² bathroom. They’ll remove the old tiles, 
 
 ## License
 MIT (see LICENSE)
-
----
-
-## Streamlit Web UI
-
-You can use a sleek web interface to generate quotes and provide feedback:
-
-### Setup
-1. Make sure you have all requirements installed:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. (If not already) Install Streamlit:
-   ```bash
-   pip install streamlit
-   ```
-
-### Run the App
-From your project root, run:
-```bash
-streamlit run app.py
-```
-
-This will open a browser window where you can:
-- Enter a transcript and (optionally) a city
-- Generate a detailed quote
-- Submit feedback on the quote
