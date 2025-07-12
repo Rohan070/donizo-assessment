@@ -1,0 +1,6 @@
+{
+  "Marseille": {"labor_multiplier": 1.0, "material_multiplier": 1.0},
+  "Paris": {"labor_multiplier": 1.2, "material_multiplier": 1.15},
+  "Lyon": {"labor_multiplier": 1.1, "material_multiplier": 1.05},
+  "Nice": {"labor_multiplier": 1.15, "material_multiplier": 1.1}
+}

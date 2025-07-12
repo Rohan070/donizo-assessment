@@ -1,0 +1,121 @@
+{
+  "city": "Marseille",
+  "zone": "Bathroom",
+  "tasks": [
+    {
+      "name": "remove tiles",
+      "materials": [
+        {
+          "name": "Ceramic tiles",
+          "quantity": 4.0,
+          "unit_price": 25,
+          "unit": "m2",
+          "total": 100.0
+        }
+      ],
+      "labor": {
+        "hours": 2.0,
+        "rate_per_hour": 40.0,
+        "total": 80.0
+      },
+      "estimated_time_hours": 2.0,
+      "vat_rate": 0.1,
+      "margin": 0.12,
+      "total_price": 221.76,
+      "confidence": 1.0
+    },
+    {
+      "name": "redo plumbing",
+      "materials": [
+        {
+          "name": "Plumbing kit",
+          "quantity": 1,
+          "unit_price": 80,
+          "unit": "set",
+          "total": 80.0
+        }
+      ],
+      "labor": {
+        "hours": 3.0,
+        "rate_per_hour": 45.0,
+        "total": 135.0
+      },
+      "estimated_time_hours": 3.0,
+      "vat_rate": 0.1,
+      "margin": 0.12,
+      "total_price": 264.88,
+      "confidence": 1.0
+    },
+    {
+      "name": "replace toilet",
+      "materials": [
+        {
+          "name": "Toilet",
+          "quantity": 1,
+          "unit_price": 150,
+          "unit": "unit",
+          "total": 150.0
+        }
+      ],
+      "labor": {
+        "hours": 1.5,
+        "rate_per_hour": 40.0,
+        "total": 60.0
+      },
+      "estimated_time_hours": 1.5,
+      "vat_rate": 0.1,
+      "margin": 0.12,
+      "total_price": 258.72,
+      "confidence": 1.0
+    },
+    {
+      "name": "install vanity",
+      "materials": [
+        {
+          "name": "Vanity",
+          "quantity": 1,
+          "unit_price": 200,
+          "unit": "unit",
+          "total": 200.0
+        }
+      ],
+      "labor": {
+        "hours": 1.5,
+        "rate_per_hour": 40.0,
+        "total": 60.0
+      },
+      "estimated_time_hours": 1.5,
+      "vat_rate": 0.1,
+      "margin": 0.12,
+      "total_price": 320.32,
+      "confidence": 1.0
+    },
+    {
+      "name": "repaint walls",
+      "materials": [
+        {
+          "name": "Paint",
+          "quantity": 4.0,
+          "unit_price": 15,
+          "unit": "liter",
+          "total": 60.0
+        }
+      ],
+      "labor": {
+        "hours": 2.0,
+        "rate_per_hour": 35.0,
+        "total": 70.0
+      },
+      "estimated_time_hours": 2.0,
+      "vat_rate": 0.1,
+      "margin": 0.12,
+      "total_price": 160.16,
+      "confidence": 1.0
+    }
+  ],
+  "total": 1225.84,
+  "vat_total": 111.44,
+  "margin_total": 119.4,
+  "confidence": 1.0,
+  "error_flag": false
+}

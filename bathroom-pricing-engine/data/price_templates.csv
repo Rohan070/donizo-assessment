@@ -1,0 +1,10 @@
+task_name,labor_hours,base_labor_rate
+Remove old tiles,2,40
+Redo plumbing for shower,3,45
+Replace toilet,1.5,40
+Install vanity,1.5,40
+Repaint walls,2,35
+Lay new ceramic floor tiles,2.5,40
+Apply grout,1,35
+Seal joints,0.5,35
+Prime walls,0.5,30

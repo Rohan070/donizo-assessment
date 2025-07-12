@@ -1,0 +1,47 @@
+{
+  "city": "Paris",
+  "zone": "Bathroom",
+  "tasks": [
+    {
+      "name": "remove tiles",
+      "materials": [
+        {
+          "name": "Ceramic tiles",
+          "quantity": 1,
+          "unit_price": 25,
+          "unit": "m2",
+          "total": 28.75
+        }
+      ],
+      "labor": {
+        "hours": 2.0,
+        "rate_per_hour": 48.0,
+        "total": 96.0
+      },
+      "estimated_time_hours": 2.0,
+      "vat_rate": 0.1,
+      "margin": 0.2,
+      "total_price": 164.67,
+      "confidence": 1.0
+    },
+    {
+      "name": "install ones",
+      "materials": [],
+      "labor": {
+        "hours": 1.5,
+        "rate_per_hour": 48.0,
+        "total": 72.0
+      },
+      "estimated_time_hours": 1.5,
+      "vat_rate": 0.2,
+      "margin": 0.2,
+      "total_price": 103.68,
+      "confidence": 1.0
+    }
+  ],
+  "total": 268.35,
+  "vat_total": 32.25,
+  "margin_total": 39.35,
+  "confidence": 1.0,
+  "error_flag": false
+}
