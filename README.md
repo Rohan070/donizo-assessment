@@ -5,6 +5,11 @@ This project is a robust, modular pricing engine that generates structured, deta
 
 ---
 
+## 📺 Demo Video
+[Watch a walkthrough of the Smart Pricing Engine on Loom](https://www.loom.com/share/007a39934f42404aaf498cc4290975fb?sid=4d1940f2-030f-40ed-9b61-e3712ccabd00)
+
+---
+
 ## Architecture Diagram
 ![Functional Structure](bathroom-pricing-engine/Functional%20Structure.png)
 *Functional structure of the smart pricing engine pipeline.*
